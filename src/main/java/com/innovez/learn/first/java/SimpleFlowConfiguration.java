@@ -26,6 +26,11 @@ public class SimpleFlowConfiguration {
 
     @Bean
     public IntegrationFlow integrationFlow() {
+        /**
+         * However we can use channel name as parameter of ```from``` method,
+         * spring integration will create that channel implicitly in not already exists
+         * in application context.
+         */
         return IntegrationFlows.from(requestChannel())
                 .transform((String payload) -> payload.toUpperCase())
                 .get();
