@@ -1,5 +1,6 @@
 package com.innovez.learn.first;
 
+import com.innovez.learn.first.java.SimpleFlowConfiguration;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.core.IsEqual;
 import org.junit.Test;
@@ -12,7 +13,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = {SimpleFlowConfiguration.class})
 @IntegrationTest
-public class SimpleFlowConfigurationTest {
+public class SimpleFlowJavaDslConfigurationTest {
     @Autowired
     public SimpleFlowConfiguration.EchoGateway echoGateway;
 

@@ -18,7 +18,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = ComplexJavaFlowConfiguration.class)
-public class ComplexFlowJavaConfigurationTest {
+public class ComplexFlowJavaDslConfigurationTest {
     private static final String DEFAULT_MESSAGE = "This is another message payload from spring integration";
 
     @Autowired

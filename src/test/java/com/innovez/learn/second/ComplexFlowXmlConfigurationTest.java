@@ -30,7 +30,6 @@ public class ComplexFlowXmlConfigurationTest {
     private ComplexEchoGateway echoGateway;
 
     @Test
-    @Timed(millis = 500)
     public void testEchoStringText() {
         String enhanced = echoGateway.echo(DEFAULT_MESSAGE);
         assertThat(enhanced, is(equalTo(DEFAULT_MESSAGE.toUpperCase())));
