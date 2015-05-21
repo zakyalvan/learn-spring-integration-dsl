@@ -1,0 +1,3 @@
+#Learn Spring Integration DSL
+
+This project intended for learn about configuring spring integration components using new java dsl instead of using 'traditional' xml namespace based config. Please note, java dsl configuration enabled by [spring-integration-java-dsl](https://github.com/spring-projects/spring-integration-java-dsl/wiki/Spring-Integration-Java-DSL-Reference) project, so we must add [that project artifact](http://mvnrepository.com/artifact/org.springframework.integration/spring-integration-java-dsl) into project classpath.

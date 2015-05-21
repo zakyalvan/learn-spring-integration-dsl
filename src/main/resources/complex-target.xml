@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:int="http://www.springframework.org/schema/integration"
+       xmlns:int-jms="http://www.springframework.org/schema/integration/jms"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/integration http://www.springframework.org/schema/integration/spring-integration.xsd
+       http://www.springframework.org/schema/integration/jms http://www.springframework.org/schema/integration/jms/spring-integration-jms.xsd">
+
+    <int-jms:inbound-gateway id="jmsInboundGateway"
+                             connection-factory="jmsConnectionFactory"
+                             request-channel="enhanceChannel"
+                             request-destination-name="integrationQueue" />
+    <int:channel id="enhanceChannel" />
+    <int:transformer id="messageEnhancer"
+                     input-channel="enhanceChannel"
+                     expression="(payload + '').toUpperCase()" />
+</beans>
